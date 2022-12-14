@@ -1,10 +1,48 @@
 // Specific CSS for your home-page
 
 body {
-  padding-top: 56px;
+  font-family: "Roboto Mono";
 }
 
-.profile-container {
-  // margin-top: 200px;
+.fullpage {
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  overflow-y: scroll;
+}
 
+.section {
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  // justify-content: center;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr;
+  // align-items: center;
+  // justify-items: center;
+}
+
+.one{
+  background-color: #FABC3C;
+}
+
+.two {
+  background-color: #F58A07;
+}
+
+.three {
+  background-color: #496A81;
+}
+
+.four {
+  background-color: #DFDFDF;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.fa-brands, .fa-solid {
+  margin-right: 16px;
 }

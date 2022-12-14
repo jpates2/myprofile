@@ -1,0 +1,9 @@
+@media (max-width: 800px) {
+  .section {
+    display: flex;
+    flex-direction: column;
+  }
+  .header-upper {
+    padding-top: 32px;
+  }
+}

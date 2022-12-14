@@ -1,0 +1,18 @@
+.project-card {
+  background-color: #DFDFDF;
+  width: 360px;
+  height: 10vh;
+  margin-bottom: 24px;
+  padding: 16px;
+  // border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h3 {
+    font-family: "Roboto Mono";
+    font-size: 24px;
+  }
+  .fa-solid {
+    font-size: 32px;
+  }
+}

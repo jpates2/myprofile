@@ -1,36 +1,30 @@
-// .navbar-lewagon {
-//   justify-content: space-between;
-//   background: white;
-// }
-
-// .navbar-lewagon .navbar-collapse {
-//   flex-grow: 0;
-// }
-
-// .navbar-lewagon .navbar-brand img {
-//   width: 40px;
-// }
-
-.top-navbar {
+.navbar {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  height: 56px;
+  height: 10%;
   font-family: "Roboto Mono";
   position: fixed;
   top: 0;
-  margin-bottom: 16px;
+}
+
+.navbar-background {
+  // background-color: #FABC3C;
+}
+
+.navbar-transparent {
+  background: transparent;
 }
 
 .navbar-links {
-  width: 25%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: auto 0;
-  padding-right: 16px;
+  padding-right: 5%;
   li {
     list-style: none;
+    margin-left: 32px;
   }
   a {
     text-decoration: none;
