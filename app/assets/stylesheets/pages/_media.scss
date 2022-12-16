@@ -20,7 +20,13 @@
     }
     p {
       margin-left: 0%;
-      margin-top: -300px;
+      margin-top: -400px;
     }
+  }
+}
+
+@media (max-width: 800px) {
+  #typed-strings {
+    align-items: center;
   }
 }
