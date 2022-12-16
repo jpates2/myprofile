@@ -9,3 +9,6 @@ application.register("hello", HelloController)
 
 import ScrollController from "./scroll_controller"
 application.register("scroll", ScrollController)
+
+import TypedController from "./typed_controller"
+application.register("typed", TypedController)

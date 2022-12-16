@@ -1,11 +1,19 @@
-<div class="fullpage" data-controller="scroll">
-	<div class="section one">
+<div class="fullpage">
+	<div class="section one" data-controller="typed">
     <div>
       <h1 class="section-header header-upper">HELLO</h1>
     </div>
-    <div>
-
+    <div id="typed-strings">
+      <p><span class="typed"> </span></p>
     </div>
+    <script>
+        var typed = new Typed(".typed",{
+        strings: [,  "Welcome to my profile","Nice to meet you, my name is Jess","I'm a Fullstack Web Developer in training"],
+        typeSpeed: 60,
+        backSpeed: 40,
+        loop: true
+        })
+    </script>
   </div>
 
 	<div class="section two">

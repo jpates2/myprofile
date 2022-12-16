@@ -13,18 +13,30 @@ body {
 .section {
   scroll-snap-align: start;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
   // justify-content: center;
   // display: grid;
   // grid-template-columns: 1fr 1fr;
   // align-items: center;
   // justify-items: center;
 }
+.two, .three, .four {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
 
-.one{
+.one {
   background-color: #FABC3C;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  h1 {
+    margin-left: 40%;
+  }
+  p {
+    margin-left: 20%;
+    margin-bottom: 0px;
+  }
 }
 
 .two {

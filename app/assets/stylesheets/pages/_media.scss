@@ -7,3 +7,20 @@
     padding-top: 32px;
   }
 }
+
+@media (max-width: 800px) {
+  .one {
+    background-color: #FABC3C;
+    margin-top: 40%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    h1 {
+      margin-left: 0%;
+    }
+    p {
+      margin-left: 0%;
+      margin-top: -300px;
+    }
+  }
+}
