@@ -31,7 +31,7 @@ body {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   h1 {
-    margin-left: 40%;
+    // margin-bottom: 0px;
   }
   p {
     margin-left: 20%;
@@ -57,4 +57,23 @@ body {
 
 .fa-brands, .fa-solid {
   margin-right: 16px;
+}
+
+hr {
+  margin-top: -27px;
+  padding: 0;
+  border-top: 5px solid black;
+  z-index: 999;
+}
+
+.section-content {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#typed-strings {
+  align-items: flex-start;
 }

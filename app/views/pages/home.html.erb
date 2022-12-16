@@ -1,34 +1,37 @@
 <div class="fullpage">
 	<div class="section one" data-controller="typed">
-    <div>
+    <div class="header-container">
       <h1 class="section-header header-upper">HELLO</h1>
+      <hr>
     </div>
-    <div id="typed-strings">
+    <div id="typed-strings" class="section-content">
       <p><span class="typed"> </span></p>
     </div>
     <script>
         var typed = new Typed(".typed",{
-        strings: [,  "Welcome to my profile","Nice to meet you, my name is Jess","I'm a Fullstack Web Developer in training"],
-        typeSpeed: 60,
-        backSpeed: 40,
+        strings: [,  "Welcome to my profile","Nice to meet you, my name is Jess","I'm a Fullstack Web Developer in training","Scroll down to find out more"],
+        typeSpeed: 40,
+        backSpeed: 10,
         loop: true
         })
     </script>
   </div>
 
 	<div class="section two">
-    <div>
+    <div class="section-content">
     </div>
-    <div>
+    <div class="header-container">
       <h1 class="section-header header-lower"><a id="about-me">ABOUT ME</a></h1>
+      <hr>
     </div>
   </div>
 
 	<div class="section three">
-    <div>
+    <div class="header-container">
       <h1 class="section-header header-upper"><a id="projects">PROJECTS</a><h1>
+      <hr>
     </div>
-    <div>
+    <div class="section-content">
       <div class="project-card">
           <h3>Fan Find</h3>
           <i class="fa-solid fa-square-plus"></i>
@@ -45,13 +48,16 @@
   </div>
 
 	<div class="section four header-lower">
-    <div>
-      <p><i class="fa-solid fa-envelope"></i>jesspates@hotmail.com</p>
-      <p><a href="https://www.linkedin.com/in/jess-pates/" target="_blank"><i class="fa-brands fa-linkedin"></i>jess-pates</a></p>
-      <p><a href="https://github.com/jpates2" target="_blank"><i class="fa-brands fa-square-github"></i>jpates2</a></p>
+    <div class="section-content">
+      <div>
+        <p><i class="fa-solid fa-envelope"></i>jesspates@hotmail.com</p>
+        <p><a href="https://www.linkedin.com/in/jess-pates/" target="_blank"><i class="fa-brands fa-linkedin"></i>jess-pates</a></p>
+        <p><a href="https://github.com/jpates2" target="_blank"><i class="fa-brands fa-square-github"></i>jpates2</a></p>
+      </div>
     </div>
-    <div>
+    <div class="header-container">
       <h1 class="section-header"><a id="contact">CONTACT</a></h1>
+      <hr>
     </div>
   </div>
 
