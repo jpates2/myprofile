@@ -1,12 +1,11 @@
 .project-card {
   background-color: #DFDFDF;
   width: 360px;
-  height: 10vh;
   margin-bottom: 24px;
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 16px 16px 0px 16px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
   box-shadow: 0 0 15px 10px rgba(0,0,0,0.2);
   h3 {
     font-family: "Roboto Mono";
@@ -20,4 +19,31 @@
     text-decoration: none;
     color: black;
   }
+}
+
+.project-header:hover {
+  color: #496A81;
+}
+
+.project-title {
+  display: flex;
+  align-items: center;
+}
+
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #DFDFDF;
+  width: 100%;
+  padding-top: 8px;
+  font-family: "Exo";
+}
+
+.collapsible {
+  outline: none;
+  cursor: pointer;
+  float: right;
+  margin-top: -30px;
+  margin-right: -16px;
 }

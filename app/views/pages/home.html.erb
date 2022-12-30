@@ -33,31 +33,37 @@
     </div>
     <div class="section-content">
 
-
-        <div class="project-card">
-          <div class="project-title">
-            <%= link_to image_tag('fanfind.png'), "https://www.fan-find.com", target: "_blank", class: "project-logo" %>
-            <h3><a href="https://www.fan-find.com", target="_blank">Fan Find</a></h3>
-          </div>
-          <i class="fa-solid fa-square-plus"></i>
+      <div class="project-card">
+        <div class="project-title">
+          <%= link_to image_tag('fanfind.png'), "https://www.fan-find.com", target: "_blank", class: "project-logo" %>
+          <a href="https://www.fan-find.com", target="_blank"><h3 class="project-header">Fan Find</h3></a>
         </div>
-
+        <div>
+          <a class="collapsible" onclick="changeIcon(this)"><i class="fa-solid fa-square-plus"></i></a>
+          <p class="collapsible-content">Mobile first web application that helps sports fans find the right people and the right place to watch the games of their team. Features include AJAX searching, filtering, chatroom, mapbox. Built using Ruby on Rails, Figma, HTML, CSS and Javascript.<br> Group project at Le Wagon.</p>
+        </div>
+      </div>
 
       <div class="project-card">
         <div class="project-title">
           <%= link_to image_tag('shart.png'), class: "project-logo" %>
-          <h3>shART</h3>
+          <h3 class="project-header">shART</h3>
         </div>
-        <i class="fa-solid fa-square-plus"></i>
+        <div>
+          <a class="collapsible" onclick="changeIcon(this)"><i class="fa-solid fa-square-plus"></i></a>
+          <p class="collapsible-content">Marketplace bringing together those with artwork to rent and those looking to rent artwork for events, occasions, public spaces etc. Built using Ruby on Rails, HTML, CSS and Javascript. <br> Group project at Le Wagon.</p>
+          </div>
       </div>
-
 
       <div class="project-card">
         <div class="project-title">
           <i class="fa-solid fa-clapperboard"></i>
-          <h3>Watchlist</h3>
+          <h3 class="project-header">Watchlist</h3>
         </div>
-          <i class="fa-solid fa-square-plus"></i>
+        <div>
+          <a class="collapsible" onclick="changeIcon(this)"><i class="fa-solid fa-square-plus"></i></a>
+          <p class="collapsible-content">Site for organising movies into lists based on genre. Users can browse lists, create a new list and add a movie to any list. Built using Ruby on Rails, HTML, CSS and Javascript. <br> Solo project.</p>
+          </div>
       </div>
 
     </div>
@@ -76,5 +82,30 @@
       <hr>
     </div>
   </div>
+
+  <script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      let content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  }
+
+  function changeIcon(anchor) {
+    var icon = anchor.querySelector("i");
+    icon.classList.toggle('fa-square-plus');
+    icon.classList.toggle('fa-square-minus');
+
+    anchor.querySelector("span").textContent = icon.classList.contains('fa-square-plus') ? "Read more" : "Read less";
+  }
+  </script>
 
 </div>
