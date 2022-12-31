@@ -41,6 +41,9 @@ body {
 
 .two {
   background-color: #F58A07;
+  p {
+    font-family: "Exo";
+  }
 }
 
 .three {
@@ -80,4 +83,12 @@ hr {
 
 .contact-icon:hover {
   color: rgba(0, 0, 0, 0.7);
+}
+
+#profile-text {
+  text-align: left;
+  margin-top: 16px;
+  p {
+    margin-bottom: 4px;
+  }
 }

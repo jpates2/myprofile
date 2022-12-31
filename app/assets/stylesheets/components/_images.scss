@@ -4,3 +4,15 @@
     margin-right: 16px;
   }
 }
+
+.profile-photo {
+  height: 120px;
+  box-shadow: 0 0 15px 5px rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+
+.photo-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
