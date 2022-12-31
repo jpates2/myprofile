@@ -86,9 +86,10 @@ hr {
 }
 
 #profile-text {
-  text-align: left;
-  margin-top: 16px;
+  text-align: justify;
+  margin: 16px;
   p {
-    margin-bottom: 4px;
+    margin-bottom: 8px;
+    font-size: 14px;
   }
 }
