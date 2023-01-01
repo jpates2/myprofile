@@ -30,3 +30,32 @@
     align-items: center;
   }
 }
+
+@media (max-width: 800px) {
+  .two {
+    height: 160vh;
+  }
+  .photo-hide {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .two .header-container {
+    order: 1;
+    // margin-top: -60px;
+  }
+  .two .section-content {
+    order: 2;
+  }
+  .two .photo-container {
+    margin-top: -100px;
+    margin-bottom: 24px;
+  }
+  .four .header-container {
+    order: 1;
+  }
+  .four .section-content {
+    order: 2;
+  }
+}
