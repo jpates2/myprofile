@@ -25,34 +25,22 @@
         <%= image_tag('profile2.jpeg', class: "profile-photo photo-hide") %>
       </div>
 
-      <div id="profile-text">
+      <button class="show-button">Find out more</button>
 
-        <button class="show-past">Experience</button>
-        <button class="show-present">Now</button>
-        <button class="show-future">Aims</button>
-
-        <div class = "past-window hidden">
-          <h3>Experience</h3>
-          <p>My name is Jess Pates. I completed the Web Development bootcamp at Le Wagon in December 2022. Over nine intense weeks I begun to learn Ruby on Rails, SQL, HTML, CSS and Javascript.</p>
-        </div>
-
-        <div class = "present-window hidden">
-          <h3>Now</h3>
-          <p>Beforehand I worked in financial services operations for a number of banks and hedge funds. I'm accustomed to working in fast paced environments and managing multiple deadlines. I particularly enjoyed working for smaller companies where I had greater autonomy and could take the iniative to solve problems.<p>
-        </div>
-
-        <div class = "future-window hidden">
-          <h3>Aims</h3>
-          <p>I've decided to switch careers as I'd like to feel greater passion towards my job. Coding offers so many opportunities to learn and I'm excited to develop my skills.
-          <p>I'm now searching for a developer role at a junior / graduate / intern / apprentice level. Open to full stack / front end / back end positions.</p>
-          <p>Please get in touch if you would like to chat or have any suitable positions available.</p>
-        </div>
+      <div class = "show-window hidden">
+      <div><i class="fa-solid fa-xmark close-button"></i></div>
+        <p>My name is Jess Pates. I completed the Web Development bootcamp at Le Wagon in December 2022. Over nine intense weeks I begun to learn Ruby on Rails, SQL, HTML, CSS and Javascript.</p>
+        <p>Beforehand I worked in financial services operations for a number of banks and hedge funds. I'm accustomed to working in fast paced environments and managing multiple deadlines. I particularly enjoyed working for smaller companies where I had greater autonomy and could take the iniative to solve problems.<p>
+        <p>I've decided to switch careers as I'd like to feel greater passion towards my job. Coding offers so many opportunities to learn and I'm excited to develop my skills.
+        <p>I'm now searching for a developer role at a junior / graduate / intern / apprentice level. Open to full stack / front end / back end positions.</p>
+        <p>Please get in touch if you would like to chat or have any suitable positions available.</p>
+      </div>
+      <div class="overlay hidden"></div>
 
         <!-- <p>I'm a British citizen - raised in Manchester but more recently a long time London resident. Currently I live in sunny Barcelona. I can work within the UK but would require a visa to work elsewhere. Open to any locations / hybrid working / fully remote.</p>
         I enjoy the challenge of finding solutions and the opportunity to be creative whilst working logically.
         The culmination was two group projects: an AirBnb style market place, and a mobile first Ruby application designed to bring together football fans. -->
 
-      </div>
 
     </div>
 
@@ -144,25 +132,31 @@
       icon.classList.toggle('fa-square-minus');
     }
 
-    const pastWindow = document.querySelector(".past-window");
-    const pastOpenWindow = document.querySelector(".show-past");
+    const showWindow = document.querySelector(".show-window");
+    const showButton = document.querySelector(".show-button");
+    const closeButton = document.querySelector(".close-button");
+    const overlay = document.querySelector(".overlay");
 
-    pastOpenWindow.addEventListener("click", function () {
-      pastWindow.classList.remove("hidden");
+    showButton.addEventListener("click", function () {
+      showWindow.classList.remove("hidden");
+      overlay.classList.remove("hidden");
     });
 
-    const presentWindow = document.querySelector(".present-window");
-    const presentOpenWindow = document.querySelector(".show-present");
-
-    presentOpenWindow.addEventListener("click", function () {
-      presentWindow.classList.remove("hidden");
+    closeButton.addEventListener("click", function () {
+      showWindow.classList.add("hidden");
+      overlay.classList.add("hidden");
     });
 
-    const futureWindow = document.querySelector(".future-window");
-    const futureOpenWindow = document.querySelector(".show-future");
+    overlay.addEventListener("click", function () {
+      showWindow.classList.add("hidden");
+      overlay.classList.add("hidden");
+    });
 
-    futureOpenWindow.addEventListener("click", function () {
-      futureWindow.classList.remove("hidden");
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !showWindow.classList.contains("hidden")) {
+        showWindow.classList.add("hidden");
+        overlay.classList.add("hidden");
+      }
     });
 
   </script>
