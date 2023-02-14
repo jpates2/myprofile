@@ -137,25 +137,23 @@
     const closeButton = document.querySelector(".close-button");
     const overlay = document.querySelector(".overlay");
 
+    const closeWindow = function() {
+      showWindow.classList.add("hidden");
+      overlay.classList.add("hidden");
+    };
+
     showButton.addEventListener("click", function () {
       showWindow.classList.remove("hidden");
       overlay.classList.remove("hidden");
     });
 
-    closeButton.addEventListener("click", function () {
-      showWindow.classList.add("hidden");
-      overlay.classList.add("hidden");
-    });
+    closeButton.addEventListener("click", closeWindow);
 
-    overlay.addEventListener("click", function () {
-      showWindow.classList.add("hidden");
-      overlay.classList.add("hidden");
-    });
+    overlay.addEventListener("click", closeWindow);
 
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && !showWindow.classList.contains("hidden")) {
-        showWindow.classList.add("hidden");
-        overlay.classList.add("hidden");
+        closeWindow();
       }
     });
 

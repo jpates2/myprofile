@@ -12,6 +12,12 @@
   width: 10rem;
 }
 
+.close-button {
+  float: right;
+  margin-top: -32px;
+  font-size: 32px;
+}
+
 .show-window {
   background-color: rgba(255, 255, 255, 0.9);
   position: absolute;
@@ -19,11 +25,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 70%;
-
-  padding: 6rem;
-  border-radius: 5px;
+  padding: 4rem;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
+  text-align: justify;
 }
 
 .overlay {
