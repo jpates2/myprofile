@@ -27,22 +27,22 @@
 
       <div id="profile-text">
 
-        <button class="show-window">About me</button>
-        <button class="show-window">About my experience</button>
-        <button class="show-window">About my future</button>
+        <button class="show-past">Experience</button>
+        <button class="show-present">Now</button>
+        <button class="show-future">Aims</button>
 
-        <div class = "window hidden">
-          <h3>About me</h3>
+        <div class = "past-window hidden">
+          <h3>Experience</h3>
           <p>My name is Jess Pates. I completed the Web Development bootcamp at Le Wagon in December 2022. Over nine intense weeks I begun to learn Ruby on Rails, SQL, HTML, CSS and Javascript.</p>
         </div>
 
-        <div class = "window hidden">
-          <h3>About my experience</h3>
+        <div class = "present-window hidden">
+          <h3>Now</h3>
           <p>Beforehand I worked in financial services operations for a number of banks and hedge funds. I'm accustomed to working in fast paced environments and managing multiple deadlines. I particularly enjoyed working for smaller companies where I had greater autonomy and could take the iniative to solve problems.<p>
         </div>
 
-        <div class = "window hidden">
-          <h3>About my future</h3>
+        <div class = "future-window hidden">
+          <h3>Aims</h3>
           <p>I've decided to switch careers as I'd like to feel greater passion towards my job. Coding offers so many opportunities to learn and I'm excited to develop my skills.
           <p>I'm now searching for a developer role at a junior / graduate / intern / apprentice level. Open to full stack / front end / back end positions.</p>
           <p>Please get in touch if you would like to chat or have any suitable positions available.</p>
@@ -124,28 +124,47 @@
   </div>
 
   <script>
-  var coll = document.getElementsByClassName("collapsible");
-  var i;
+    const coll = document.getElementsByClassName("collapsible");
 
-  for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      let content = this.nextElementSibling;
-      if (content.style.maxHeight){
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-      }
+    for (let i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        let content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
+
+    function changeIcon(anchor) {
+      const icon = anchor.querySelector("i");
+      icon.classList.toggle('fa-square-plus');
+      icon.classList.toggle('fa-square-minus');
+    }
+
+    const pastWindow = document.querySelector(".past-window");
+    const pastOpenWindow = document.querySelector(".show-past");
+
+    pastOpenWindow.addEventListener("click", function () {
+      pastWindow.classList.remove("hidden");
     });
-  }
 
-  function changeIcon(anchor) {
-    var icon = anchor.querySelector("i");
-    icon.classList.toggle('fa-square-plus');
-    icon.classList.toggle('fa-square-minus');
+    const presentWindow = document.querySelector(".present-window");
+    const presentOpenWindow = document.querySelector(".show-present");
 
-    anchor.querySelector("span").textContent = icon.classList.contains('fa-square-plus') ? "Read more" : "Read less";
-  }
+    presentOpenWindow.addEventListener("click", function () {
+      presentWindow.classList.remove("hidden");
+    });
+
+    const futureWindow = document.querySelector(".future-window");
+    const futureOpenWindow = document.querySelector(".show-future");
+
+    futureOpenWindow.addEventListener("click", function () {
+      futureWindow.classList.remove("hidden");
+    });
+
   </script>
 
 </div>
