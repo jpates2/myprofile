@@ -85,11 +85,11 @@ hr {
   color: rgba(0, 0, 0, 0.7);
 }
 
-// #profile-text {
-//   text-align: justify;
-//   margin: 16px 16px 0px 16px;
-//   p {
-//     margin-bottom: 8px;
-//     font-size: 14px;
-//   }
-// }
+.profile-text {
+  text-align: justify;
+  margin: 16px 16px 32px 16px;
+  p {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+}
