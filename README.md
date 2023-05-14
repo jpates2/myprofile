@@ -1,1 +1,5 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+**PROFILE**
+
+Personal profile page with links to past and current projects.
+
+:round_pushpin: https://myprofile-jpates2.herokuapp.com/
